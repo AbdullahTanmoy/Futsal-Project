@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futsal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/d797f6557c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <header class="bg-stone-100">
+      <nav class="flex items-center justify-between w-[90%] mx-auto py-5">
+        <div class="">
+          <img
+            class="w-28 sm:w-32 md:w-48"
+            src="https://teamgroundbd.com/wp-content/uploads/2024/04/team-logo.webp"
+            alt=""
+          />
+        </div>
+        <div
+          class="nav-links lg:static absolute bg-stone-100 lg:min-h-fit min-h-96 left-0 top-[-200%] lg:w-auto w-full flex items-center px-5"
+        >
+          <ul
+            class="flex flex-col lg:flex-row lg:items-center gap-9 font-semibold"
+          >
+            <li>
+              <a class="hover:text-blue-900" href="#">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-blue-900" href="#">Pricing</a>
+            </li>
+            <!-- <li>
+              <a class="hover:text-blue-900" href="#">News</a>
+            </li> -->
+            <li>
+              <a class="hover:text-blue-900" href="#">About Us</a>
+            </li>
+            <li>
+              <a class="hover:text-blue-900" href="#">Contact Us</a>
+            </li>
+            <li>
+              <a class="hover:text-blue-900" href="#">Account</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-6">
+          <button
+            class="bg-blue-900 text-white px-5 py-2 rounded-md hover:bg-blue-500"
+          >
+            Book Now
+          </button>
+          <ion-icon id="menuButton" onclick="onToggleMenu(this)" class="text-3xl cursor-pointer lg:hidden" name="menu"></ion-icon>
+        </div>
+      </nav>
+    </header>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        const menuButton = document.getElementById('menuButton');
+       
+
+  menuButton.addEventListener('click', function () {
+    if (navLinks.classList.contains('top-[-200%]')) {
+      navLinks.classList.remove('top-[-200%]');
+      navLinks.classList.add('top-20');
+    } else {
+      navLinks.classList.remove('top-20');
+      navLinks.classList.add('top-[-200%]');
+    }
+  });
+
+        function onToggleMenu(e){
+          e.name = e.name === 'menu' ? 'close' : 'menu';
+          
+        }
+    </script>
+  </body>
+</html>
