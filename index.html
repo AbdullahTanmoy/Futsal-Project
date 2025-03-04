@@ -54,9 +54,28 @@
             <li>
               <a class="hover:text-blue-900" href="#">Contact Us</a>
             </li>
-            <li>
+
+
+            <!-- <li class="flex items-center justify-center hover:text-blue-900">
+                <span><i class="fa-solid fa-user"></i></span>
               <a class="hover:text-blue-900" href="#">Account</a>
-            </li>
+            </li> -->
+
+            <li class="relative group cursor-pointer">
+                <div class="flex items-center gap-2 hover:text-blue-900">
+                  <i class="fa-solid fa-user"></i>
+                  <a href="#">Account</a>
+                </div>
+          
+                <!-- Dropdown Menu -->
+                <ul
+                  class="absolute left-0  bg-white shadow-md rounded-md w-40 hidden group-hover:block"
+                >
+                  <li class="px-4 py-2 hover:bg-blue-100"><a href="#">Sign in</a></li>
+                  <li class="px-4 py-2 hover:bg-blue-100"><a href="#">Sign Up</a></li>
+                </ul>
+              </li>
+
           </ul>
         </div>
         <div class="flex items-center gap-6">
