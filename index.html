@@ -26,7 +26,7 @@
   <body>
     <header class="bg-stone-100">
       <nav class="flex items-center justify-between w-[90%] mx-auto py-5">
-        <div class="">
+        <div class="flex-1">
           <img
             class="w-28 sm:w-32 md:w-48"
             src="https://teamgroundbd.com/wp-content/uploads/2024/04/team-logo.webp"
@@ -55,27 +55,29 @@
               <a class="hover:text-blue-900" href="#">Contact Us</a>
             </li>
 
-
             <!-- <li class="flex items-center justify-center hover:text-blue-900">
                 <span><i class="fa-solid fa-user"></i></span>
               <a class="hover:text-blue-900" href="#">Account</a>
             </li> -->
 
             <li class="relative group cursor-pointer">
-                <div class="flex items-center gap-2 hover:text-blue-900">
-                  <i class="fa-solid fa-user"></i>
-                  <a href="#">Account</a>
-                </div>
-          
-                <!-- Dropdown Menu -->
-                <ul
-                  class="absolute left-0  bg-white shadow-md rounded-md w-40 hidden group-hover:block"
-                >
-                  <li class="px-4 py-2 hover:bg-blue-100"><a href="#">Sign in</a></li>
-                  <li class="px-4 py-2 hover:bg-blue-100"><a href="#">Sign Up</a></li>
-                </ul>
-              </li>
+              <div class="flex items-center gap-2 hover:text-blue-900">
+                <i class="fa-solid fa-user"></i>
+                <a href="#">Account</a>
+              </div>
 
+              <!-- Dropdown Menu -->
+              <ul
+                class="absolute left-0 bg-white shadow-md rounded-md w-40 hidden group-hover:block"
+              >
+                <li class="px-4 py-2 hover:bg-blue-100">
+                  <a href="#">Sign in</a>
+                </li>
+                <li class="px-4 py-2 hover:bg-blue-100">
+                  <a href="#">Sign Up</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
         <div class="flex items-center gap-6">
@@ -84,30 +86,33 @@
           >
             Book Now
           </button>
-          <ion-icon id="menuButton" onclick="onToggleMenu(this)" class="text-3xl cursor-pointer lg:hidden" name="menu"></ion-icon>
+          <ion-icon
+            id="menuButton"
+            onclick="onToggleMenu(this)"
+            class="text-3xl cursor-pointer lg:hidden"
+            name="menu"
+          ></ion-icon>
         </div>
       </nav>
     </header>
 
     <script>
-        const navLinks = document.querySelector('.nav-links')
-        const menuButton = document.getElementById('menuButton');
-       
+      const navLinks = document.querySelector(".nav-links");
+      const menuButton = document.getElementById("menuButton");
 
-  menuButton.addEventListener('click', function () {
-    if (navLinks.classList.contains('top-[-200%]')) {
-      navLinks.classList.remove('top-[-200%]');
-      navLinks.classList.add('top-20');
-    } else {
-      navLinks.classList.remove('top-20');
-      navLinks.classList.add('top-[-200%]');
-    }
-  });
-
-        function onToggleMenu(e){
-          e.name = e.name === 'menu' ? 'close' : 'menu';
-          
+      menuButton.addEventListener("click", function () {
+        if (navLinks.classList.contains("top-[-200%]")) {
+          navLinks.classList.remove("top-[-200%]");
+          navLinks.classList.add("top-20");
+        } else {
+          navLinks.classList.remove("top-20");
+          navLinks.classList.add("top-[-200%]");
         }
+      });
+
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+      }
     </script>
   </body>
 </html>
