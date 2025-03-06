@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/d797f6557c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+</head>
+<body>
+    <header class="bg-stone-100">
+        <nav class="flex items-center justify-between w-[90%] mx-auto py-5">
+          <div class="flex-1">
+            <img
+              class="w-28 sm:w-32 md:w-48"
+              src="https://teamgroundbd.com/wp-content/uploads/2024/04/team-logo.webp"
+              alt=""
+            />
+          </div>
+          <div
+            class="nav-links lg:static absolute bg-stone-100 lg:min-h-fit min-h-96 left-0 top-[-200%] lg:w-auto w-full flex items-center px-5"
+          >
+            <ul
+              class="flex flex-col lg:flex-row lg:items-center gap-9 font-semibold"
+            >
+              <li>
+                <a class="hover:text-blue-900" href="#">Home</a>
+              </li>
+              <li>
+                <a class="hover:text-blue-900" href="#">Pricing</a>
+              </li>
+              <!-- <li>
+                <a class="hover:text-blue-900" href="#">News</a>
+              </li> -->
+              <li>
+                <a class="hover:text-blue-900" href="#">About Us</a>
+              </li>
+              <li>
+                <a class="hover:text-blue-900" href="#">Contact Us</a>
+              </li>
+  
+              <!-- <li class="flex items-center justify-center hover:text-blue-900">
+                  <span><i class="fa-solid fa-user"></i></span>
+                <a class="hover:text-blue-900" href="#">Account</a>
+              </li> -->
+  
+              <li class="relative group cursor-pointer">
+                <div class="flex items-center gap-2 hover:text-blue-900">
+                  <i class="fa-solid fa-user"></i>
+                  <a href="#">Account</a>
+                </div>
+  
+                <!-- Dropdown Menu -->
+                <ul
+                  class="absolute left-0 bg-white shadow-md rounded-md w-24 hidden group-hover:block"
+                >
+                  <li class="px-4 py-2 hover:bg-blue-100">
+                    <a href="#">Sign in</a>
+                  </li>
+                  <li class="px-4 py-2 hover:bg-blue-100">
+                    <a href="#">Sign Up</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-6">
+            <button
+              class="bg-blue-900 text-white px-5 py-2 rounded-md hover:bg-blue-500"
+            >
+              Book Now
+            </button>
+            <ion-icon
+              id="menuButton"
+              onclick="onToggleMenu(this)"
+              class="text-3xl cursor-pointer lg:hidden"
+              name="menu"
+            ></ion-icon>
+          </div>
+        </nav>
+      </header>
+    <main>
+        <div class="flex items-center justify-center">
+            
+            <fieldset class="fieldset max-w-md bg-base-300 border border-base-300 p-4 rounded-box mt-5">
+          
+               <div>
+                <img class="w-1/2 mx-auto" src="https://teamgroundbd.com/wp-content/uploads/2024/04/team-logo.webp" alt="">
+                <h5 class="text-center font-semibold text-3xl text-gray-700 my-3">Sign Up Now</h5>
+               </div>
+         
+                <input type="text" class="input w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="First Name" />
+                <input type="text" class="input w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Last Name" />
+                <input type="email" class="input w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Email" />
+                <input type="number" class="input w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Phone" />
+                <input type="password" class="input w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Password" />
+                <input type="password" class="input w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Confirm Password" />
+                
+                <button class="btn btn-neutral hover:bg-blue-500 mt-4">Sign Up</button>
+                <div class="text-base text-gray-600 mt-3" ><span>Already have an account?</span> <span class="text-blue-600 font-semibold hover:underline decoration-2"><a href="">Sign In</a></span></div>
+              </fieldset>
+        </div>
+       
+    </main>
+    <footer class="bg-[#161614] px-6 lg:px-14 py-6 mt-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-4 g-9">
+          <div class="text-white p-5">
+            <img class="w-56" src="https://teamgroundbd.com/wp-content/uploads/2024/05/white-logo.webp" alt="">
+            <p class="font-normal text-left mt-3 text-wrap">Play, enjoy, and live 90 minutes of ultimate futsal with your team. Experience the thrill of the game on our high-quality turf, designed for a top-notch playing experience. Make your time here safe and relaxing with the amenities we offer, including a locker room, shower room, and drinking-water supply.</p>
+            <div class="mt-2">
+                <span><i class="fa-brands fa-facebook-f text-white py-2 px-3 hover:bg-[#3b5a9a] hover:rounded-full"></i></span>
+                <span><i class="fa-brands fa-youtube text-white p-2 hover:bg-red-600 hover:rounded-full"></i></span>
+                <span><i class="fa-brands fa-instagram text-white p-2 hover:bg-[#7c4a3a] hover:rounded-full"></i></span>
+                <span><i class="fa-brands fa-x-twitter text-white p-2 hover:bg-[#1aa9e1] hover:rounded-full"></i></span>
+                <span><i class="fa-brands fa-tiktok text-white p-2 hover:bg-[#5e479d] hover:rounded-full"></i></span>
+
+            </div>
+        </div>
+          <div class="text-white p-5 mt-7 sm:mt-0">
+            <h4 class="font-bold text-xl uppercase">Quick Link</h4>
+            <ul class="mt-3 leading-8">
+                <li><span><input type="checkbox" checked="checked" class="checkbox checkbox-sm checkbox-primary rounded-sm " /></span><span class="ml-3 font-medium"><a href="">Home</a></span></li>
+                <li><span><input type="checkbox" checked="checked" class="checkbox checkbox-sm checkbox-primary rounded-sm " /></span><span class="ml-3 font-medium"><a href="">About Us</a></span></li>
+                <li><span><input type="checkbox" checked="checked" class="checkbox checkbox-sm checkbox-primary rounded-sm " /></span><span class="ml-3 font-medium"><a href="">Contact Us</a></span></li>
+                <li><span><input type="checkbox" checked="checked" class="checkbox checkbox-sm checkbox-primary rounded-sm " /></span><span class="ml-3 font-medium"><a href="">Sign in</a></span></li>
+                <li><span><input type="checkbox" checked="checked" class="checkbox checkbox-sm checkbox-primary rounded-sm " /></span><span class="ml-3 font-medium"><a href="">Sign Up</a></span></li>
+            </ul>
+          </div>
+          <div class="text-white p-5 mt-7 lg:mt-0">
+            <h4 class="font-bold text-xl uppercase">Contact us</h4>
+            <ul class="mt-3 leading-8">
+               <li><span><i class="fa-solid fa-phone text-[#422ad5]"></i></span><span class="ml-3 font-medium">01689486810</span></li>
+               <li><span><i class="fa-solid fa-envelope text-[#422ad5]"></i></span><span class="ml-3 font-medium text-wrap">hsakib5446614@gmail.com</span></li>
+               <li><span><i class="fa-solid fa-location-dot text-[#422ad5]"></i></span><span class="ml-3 font-medium">Jatrabari, Dhaka</span></li>
+            </ul>
+          </div>
+          <div class="text-white p-5 mt-7 lg:mt-0">
+            <h4 class="font-bold text-xl uppercase">location</h4>
+            <div class="mt-3">
+                <iframe class="w-52 sm:w-64 h-52 sm:h-60" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7306.004509829798!2d90.42890129282017!3d23.711613514787487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9cc7d566d03%3A0x2472a49ac0504cd2!2sJatra%20Bari%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1741080367781!5m2!1sen!2sbd"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelector(".nav-links");
+        const menuButton = document.getElementById("menuButton");
+  
+        menuButton.addEventListener("click", function () {
+          if (navLinks.classList.contains("top-[-200%]")) {
+            navLinks.classList.remove("top-[-200%]");
+            navLinks.classList.add("top-20","z-50");
+          } else {
+            navLinks.classList.remove("top-20","z-50");
+            navLinks.classList.add("top-[-200%]");
+          }
+        });
+  
+        function onToggleMenu(e) {
+          e.name = e.name === "menu" ? "close" : "menu";
+        }
+      </script>
+</body>
+</html>
