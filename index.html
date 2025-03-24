@@ -24,42 +24,55 @@
     ></script>
   </head>
   <body>
-    <header class="bg-stone-100">
-      <nav class="flex items-center justify-between w-[90%] mx-auto py-5">
-        <div class="flex-1">
-          <img
-            class="w-28 sm:w-32 md:w-48"
-            src="https://teamgroundbd.com/wp-content/uploads/2024/04/team-logo.webp"
-            alt=""
-          />
+    <header class="sticky top-0 z-50 shadow-lg bg-stone-100">
+      <nav class="bg-white shadow-md py-4 px-6">
+        <div class="max-w-[1320px] mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex-1">
+                <img src="https://teamgroundbd.com/wp-content/uploads/2024/04/team-logo.webp" alt="Logo" class="w-28 sm:w-32 md:w-48">
+            </div>
+
+            <!-- Navbar Links -->
+            <ul class="hidden lg:flex space-x-6 text-gray-700 font-medium mr-4 ">
+                <li><a href="#" class="hover:text-blue-900">Home</a></li>
+                <li><a href="#" class="hover:text-blue-900">Pricing</a></li>
+                <li><a href="#" class="hover:text-blue-900">News</a></li>
+                <li><a href="#" class="hover:text-blue-900">About Us</a></li>
+                <li><a href="#" class="hover:text-blue-900">Contact Us</a></li>
+                <li class="relative group cursor-pointer">
+                  <div class="flex items-center gap-2 hover:text-blue-900">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="#">Account</a>
+                  </div>
+    
+                  <!-- Dropdown Menu -->
+                  <ul
+                    class="absolute left-0 bg-white shadow-md rounded-md w-24 hidden group-hover:block z-50"
+                  >
+                    <li class="px-4 py-2 hover:bg-blue-300">
+                      <a href="#">Sign in</a>
+                    </li>
+                    <li class="px-4 py-2 hover:bg-blue-300">
+                      <a href="/signup.html">Sign Up</a>
+                    </li>
+                  </ul>
+                </li>
+            </ul>
+
+            <!-- Book Now Button -->
+            <button class="lg:flex bg-blue-900 text-white px-5 py-2 rounded-lg hover:bg-blue-500 ">Book Now</button>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-gray-700 text-2xl ml-3">&#9776;</button>
         </div>
-        <div
-          class="nav-links lg:static absolute bg-stone-100 lg:min-h-fit min-h-96 left-0 top-[-200%] lg:w-auto w-full flex items-center px-5"
-        >
-          <ul
-            class="flex flex-col lg:flex-row lg:items-center gap-9 font-semibold"
-          >
-            <li>
-              <a class="hover:text-blue-900" href="#">Home</a>
-            </li>
-            <li>
-              <a class="hover:text-blue-900" href="#">Pricing</a>
-            </li>
-            <li>
-              <a class="hover:text-blue-900" href="#">News</a>
-            </li>
-            <li>
-              <a class="hover:text-blue-900" href="#">About Us</a>
-            </li>
-            <li>
-              <a class="hover:text-blue-900" href="#">Contact Us</a>
-            </li>
 
-            <!-- <li class="flex items-center justify-center hover:text-blue-900">
-                <span><i class="fa-solid fa-user"></i></span>
-              <a class="hover:text-blue-900" href="#">Account</a>
-            </li> -->
-
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden bg-white space-y-4 z-10">
+            <li><a href="#" class="hover:text-blue-900">Home</a></li>
+            <li><a href="#" class="hover:text-blue-900">Pricing</a></li>
+            <li><a href="#" class="hover:text-blue-900">News</a></li>
+            <li><a href="#" class="hover:text-blue-900">About Us</a></li>
+            <li><a href="#" class="hover:text-blue-900">Contact Us</a></li>
             <li class="relative group cursor-pointer">
               <div class="flex items-center gap-2 hover:text-blue-900">
                 <i class="fa-solid fa-user"></i>
@@ -70,30 +83,17 @@
               <ul
                 class="absolute left-0 bg-white shadow-md rounded-md w-24 hidden group-hover:block z-50"
               >
-                <li class="px-4 py-2 hover:bg-blue-100">
+                <li class="px-4 py-2 hover:bg-blue-300">
                   <a href="#">Sign in</a>
                 </li>
-                <li class="px-4 py-2 hover:bg-blue-100">
+                <li class="px-4 py-2 hover:bg-blue-300">
                   <a href="/signup.html">Sign Up</a>
                 </li>
               </ul>
             </li>
-          </ul>
-        </div>
-        <div class="flex items-center gap-6">
-          <button
-            class="bg-blue-900 text-white px-5 py-2 rounded-md hover:bg-blue-500"
-          >
-            Book Now
-          </button>
-          <ion-icon
-            id="menuButton"
-            onclick="onToggleMenu(this)"
-            class="text-3xl cursor-pointer lg:hidden"
-            name="menu"
-          ></ion-icon>
-        </div>
-      </nav>
+            <!-- <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Book Now</button> -->
+        </ul>
+    </nav>
     </header>
 
     <main>
@@ -287,7 +287,7 @@
                   type="checkbox"
                   checked="checked"
                   class="checkbox checkbox-sm checkbox-primary rounded-sm" /></span
-              ><span class="ml-3 font-medium"><a href="">Sign in</a></span>
+              ><span class="ml-3 font-medium"><a href="/signin.html">Sign in</a></span>
             </li>
             <li>
               <span
@@ -337,23 +337,22 @@
       </div>
     </footer>
 
-    <script>
-      const navLinks = document.querySelector(".nav-links");
-      const menuButton = document.getElementById("menuButton");
 
-      menuButton.addEventListener("click", function () {
-        if (navLinks.classList.contains("top-[-200%]")) {
-          navLinks.classList.remove("top-[-200%]");
-          navLinks.classList.add("top-20", "z-50");
-        } else {
-          navLinks.classList.remove("top-20", "z-50");
-          navLinks.classList.add("top-[-200%]");
-        }
+
+
+  <script>
+      document.getElementById('menu-btn').addEventListener('click', function() {
+          let menu = document.getElementById('mobile-menu');
+          if (menu.classList.contains('hidden')) {
+              menu.classList.remove('hidden');
+              menu.classList.add('block');  
+          } else {
+              menu.classList.remove('block');
+              menu.classList.add('hidden');
+          }
       });
+  </script>
 
-      function onToggleMenu(e) {
-        e.name = e.name === "menu" ? "close" : "menu";
-      }
-    </script>
+    
   </body>
 </html>

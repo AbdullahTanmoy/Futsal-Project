@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-Up</title>
+    <title>Sign-In</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -103,18 +103,28 @@
           
                <div>
                 <img class="w-1/2 mx-auto" src="https://teamgroundbd.com/wp-content/uploads/2024/04/team-logo.webp" alt="">
-                <h5 class="text-center font-semibold text-3xl text-gray-700 my-3">Sign Up Now</h5>
+                <h5 class="text-center font-semibold text-3xl text-gray-700 my-3">Sign In Now</h5>
                </div>
          
-                <input type="text" class="input w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="First Name" />
-                <input type="text" class="input w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Last Name" />
-                <input type="email" class="input w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Email" />
+                
                 <input type="number" class="input w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Phone" />
                 <input type="password" class="input w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Password" />
-                <input type="password" class="input w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Confirm Password" />
+
+                <div class="flex justify-between items-center ">
+                    <label class="flex items-center justify-center" >
+                        <input type="checkbox" class="form-checkbox text-blue-500 ">
+                        <span class="ml-2 text-base font-bold text-gray-500">Remember me</span>
+                    </label>
+                  
+                    <div>
+                        <span class="text-red-600 text-base font-semibold hover:underline decoration-2"><a href="">Forget Password?</a></span>
+                    </div>
+
+                </div>
                 
-                <button class="btn btn-neutral hover:bg-blue-500 mt-4">Sign Up</button>
-                <div class="text-base text-gray-600 mt-3" ><span>Already have an account?</span> <span class="text-blue-600 font-semibold hover:underline decoration-2"><a href="/signin.html">Sign In</a></span></div>
+                
+                <button class="btn btn-neutral hover:bg-blue-500 mt-4">Sign In</button>
+                <div class="text-base text-gray-600 mt-3" ><span>Have not an account yet?</span> <span class="text-blue-600 font-semibold hover:underline decoration-2"><a href="/signup.html">Sign up</a></span></div>
               </fieldset>
         </div>
        
@@ -140,7 +150,7 @@
                 <li><span><input type="checkbox" checked="checked" class="checkbox checkbox-sm checkbox-primary rounded-sm " /></span><span class="ml-3 font-medium"><a href="">Home</a></span></li>
                 <li><span><input type="checkbox" checked="checked" class="checkbox checkbox-sm checkbox-primary rounded-sm " /></span><span class="ml-3 font-medium"><a href="">About Us</a></span></li>
                 <li><span><input type="checkbox" checked="checked" class="checkbox checkbox-sm checkbox-primary rounded-sm " /></span><span class="ml-3 font-medium"><a href="">Contact Us</a></span></li>
-                <li><span><input type="checkbox" checked="checked" class="checkbox checkbox-sm checkbox-primary rounded-sm " /></span><span class="ml-3 font-medium"><a href="/index.html">Sign in</a></span></li>
+                <li><span><input type="checkbox" checked="checked" class="checkbox checkbox-sm checkbox-primary rounded-sm " /></span><span class="ml-3 font-medium"><a href="/signin.html">Sign in</a></span></li>
                 <li><span><input type="checkbox" checked="checked" class="checkbox checkbox-sm checkbox-primary rounded-sm " /></span><span class="ml-3 font-medium"><a href="/signup.html">Sign Up</a></span></li>
             </ul>
           </div>
